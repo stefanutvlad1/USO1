@@ -1,11 +1,24 @@
+
 name: syntax
-on: [push]
+on: push
 jobs:
-  build:
-  runs-on: ubuntu-latest
-  steps:
-   - uses: actions/checkout@v2
-     with:
-   - run: echo Tester is running
-   - run: gcc-v
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: echo Tester is working
+      - run: gcc -v
+      - run: python src/main.py
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: echo Tester is working
+      - run: python src/main.py
   
