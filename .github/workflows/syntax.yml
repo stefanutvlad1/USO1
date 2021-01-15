@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-c@v2
         with:
-          python-version: 3.7
+          c-latest
       - run: echo Tester is working
       - run: gcc -v
       - run: python src/main.c
@@ -16,9 +16,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-c@v2
         with:
-          python-version: 3.7
+          c-latest
       - run: echo Tester is working
       - run: python src/main.c
   
