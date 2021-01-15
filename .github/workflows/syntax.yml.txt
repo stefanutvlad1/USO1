@@ -1,0 +1,11 @@
+name: syntax
+on: [push]
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v2
+     with:
+   - run: echo Tester is running
+   - run: gcc-v
+  
