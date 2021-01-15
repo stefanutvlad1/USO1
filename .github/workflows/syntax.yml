@@ -11,7 +11,7 @@ jobs:
           python-version: 3.7
       - run: echo Tester is working
       - run: gcc -v
-      - run: python src/main.py
+      - run: python src/main.c
   windows:
     runs-on: windows-latest
     steps:
@@ -20,5 +20,5 @@ jobs:
         with:
           python-version: 3.7
       - run: echo Tester is working
-      - run: python src/main.py
+      - run: python src/main.c
   
